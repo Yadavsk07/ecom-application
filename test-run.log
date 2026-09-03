@@ -1,0 +1,86 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.app:ecom-application >----------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ ecom-application ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ ecom-application ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ ecom-application ---
+[INFO] skip non existing resourceDirectory D:\Ecomm-project\ecom-application\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ ecom-application ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ ecom-application ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.app.ecom_application.AuthFlowTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.229 s -- in com.app.ecom_application.AuthFlowTest
+[INFO] Running com.app.ecom_application.EcomApplicationTests
+20:08:02.196 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.app.ecom_application.EcomApplicationTests]: EcomApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:08:02.437 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.app.ecom_application.EcomApplication for test class com.app.ecom_application.EcomApplicationTests
+20:08:02.607 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.app.ecom_application.EcomApplicationTests]: EcomApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:08:02.612 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.app.ecom_application.EcomApplication for test class com.app.ecom_application.EcomApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-09-02T20:08:03.633+05:30  WARN 25228 --- [ecom-application] [           main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/kumar/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/kumar/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2026-09-02T20:08:03.665+05:30  INFO 25228 --- [ecom-application] [           main] c.a.e.EcomApplicationTests               : Starting EcomApplicationTests using Java 22.0.1 with PID 25228 (started by Sumit in D:\Ecomm-project\ecom-application)
+2026-09-02T20:08:03.666+05:30  INFO 25228 --- [ecom-application] [           main] c.a.e.EcomApplicationTests               : No active profile set, falling back to 1 default profile: "default"
+2026-09-02T20:08:07.398+05:30  INFO 25228 --- [ecom-application] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-09-02T20:08:07.501+05:30  INFO 25228 --- [ecom-application] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 4 MongoDB repository interfaces.
+2026-09-02T20:08:08.820+05:30  INFO 25228 --- [ecom-application] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.8.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22.0.1+8-16"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='yadavsk0709_db_user', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@7c226095], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@7ea07516, com.mongodb.Jep395RecordCodecProvider@30af23fd, com.mongodb.KotlinCodecProvider@65fc8edc, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=ecomm.vqwafnb.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-fgyf5n-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@a357c3e], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-09-02T20:08:08.850+05:30  INFO 25228 --- [ecom-application] [fnb.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-8emom5a-shard-00-00.vqwafnb.mongodb.net:27017 to client view of cluster
+2026-09-02T20:08:08.930+05:30  INFO 25228 --- [ecom-application] [fnb.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-8emom5a-shard-00-02.vqwafnb.mongodb.net:27017 to client view of cluster
+2026-09-02T20:08:08.931+05:30  INFO 25228 --- [ecom-application] [fnb.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-8emom5a-shard-00-01.vqwafnb.mongodb.net:27017 to client view of cluster
+2026-09-02T20:08:10.495+05:30  INFO 25228 --- [ecom-application] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-8emom5a-shard-00-01.vqwafnb.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=866543600, minRoundTripTimeNanos=0, setName='atlas-fgyf5n-shard-0', canonicalAddress=ac-8emom5a-shard-00-01.vqwafnb.mongodb.net:27017, hosts=[ac-8emom5a-shard-00-01.vqwafnb.mongodb.net:27017, ac-8emom5a-shard-00-00.vqwafnb.mongodb.net:27017, ac-8emom5a-shard-00-02.vqwafnb.mongodb.net:27017], passives=[], arbiters=[], primary='ac-8emom5a-shard-00-01.vqwafnb.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000011a, setVersion=299, topologyVersion=TopologyVersion{processId=6a8c989a5fcc5ef01e2f5318, counter=10}, lastWriteDate=Wed Sep 02 20:08:08 IST 2026, lastUpdateTimeNanos=173670524599700}
+2026-09-02T20:08:10.496+05:30  INFO 25228 --- [ecom-application] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-8emom5a-shard-00-00.vqwafnb.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=866544000, minRoundTripTimeNanos=0, setName='atlas-fgyf5n-shard-0', canonicalAddress=ac-8emom5a-shard-00-00.vqwafnb.mongodb.net:27017, hosts=[ac-8emom5a-shard-00-01.vqwafnb.mongodb.net:27017, ac-8emom5a-shard-00-00.vqwafnb.mongodb.net:27017, ac-8emom5a-shard-00-02.vqwafnb.mongodb.net:27017], passives=[], arbiters=[], primary='ac-8emom5a-shard-00-01.vqwafnb.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=299, topologyVersion=TopologyVersion{processId=6a8c963068dd06422701c5c9, counter=10}, lastWriteDate=Wed Sep 02 20:08:08 IST 2026, lastUpdateTimeNanos=173670524599700}
+2026-09-02T20:08:10.496+05:30  INFO 25228 --- [ecom-application] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-8emom5a-shard-00-02.vqwafnb.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=867559400, minRoundTripTimeNanos=0, setName='atlas-fgyf5n-shard-0', canonicalAddress=ac-8emom5a-shard-00-02.vqwafnb.mongodb.net:27017, hosts=[ac-8emom5a-shard-00-01.vqwafnb.mongodb.net:27017, ac-8emom5a-shard-00-00.vqwafnb.mongodb.net:27017, ac-8emom5a-shard-00-02.vqwafnb.mongodb.net:27017], passives=[], arbiters=[], primary='ac-8emom5a-shard-00-01.vqwafnb.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=299, topologyVersion=TopologyVersion{processId=6a8c9b4df82725844120815e, counter=5}, lastWriteDate=Wed Sep 02 20:08:08 IST 2026, lastUpdateTimeNanos=173670525612300}
+2026-09-02T20:08:10.499+05:30  INFO 25228 --- [ecom-application] [ngodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-8emom5a-shard-00-01.vqwafnb.mongodb.net:27017 with max election id 7fffffff000000000000011a and max set version 299
+2026-09-02T20:08:12.503+05:30  INFO 25228 --- [ecom-application] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-09-02T20:08:12.638+05:30  INFO 25228 --- [ecom-application] [           main] c.a.e.EcomApplicationTests               : Started EcomApplicationTests in 9.924 seconds (process running for 12.551)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (C:\Users\kumar\.m2\repository\net\bytebuddy\byte-buddy-agent\1.18.10\byte-buddy-agent-1.18.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.86 s -- in com.app.ecom_application.EcomApplicationTests
+[INFO] Running com.app.ecom_application.PaymentServiceTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.060 s -- in com.app.ecom_application.PaymentServiceTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.804 s
+[INFO] Finished at: 2026-09-02T20:08:16+05:30
+[INFO] ------------------------------------------------------------------------
