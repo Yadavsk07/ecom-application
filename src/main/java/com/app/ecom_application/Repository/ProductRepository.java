@@ -16,6 +16,10 @@ public interface ProductRepository extends MongoRepository<Product, Long>
 
     List<Product> findByActiveTrue();
 
+    List<Product> findByIdIn(List<Long> ids);
+
     @Query("{ 'active': true, 'stockQuantity': { $gt: 0 }, 'name': { $regex: ?0, $options: 'i' } }")
     List<Product> searchProducts(String keyword);
+
+
 }

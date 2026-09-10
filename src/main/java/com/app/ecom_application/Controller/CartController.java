@@ -3,6 +3,7 @@ package com.app.ecom_application.Controller;
 
 import com.app.ecom_application.Dto.CartItemRequest;
 import com.app.ecom_application.Dto.CartItemResponse;
+import com.app.ecom_application.Dto.CartValidationResult;
 import com.app.ecom_application.Model.CartItem;
 import com.app.ecom_application.Service.CartService;
 import lombok.Data;
@@ -48,6 +49,16 @@ public class CartController {
 
 
         return deleted ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();
+    }
+
+    @GetMapping("/validate")
+    public ResponseEntity<CartValidationResult>
+    validateCartForCheckout(
+            @RequestAttribute("userId") Long userId) {
+
+        return ResponseEntity.ok(
+                cartService.validateCartForCheckout(userId)
+        );
     }
 
 //    @GetMapping("/item/{userId}")

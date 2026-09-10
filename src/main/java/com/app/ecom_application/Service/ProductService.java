@@ -6,6 +6,8 @@ import com.app.ecom_application.Dto.ProductResponse;
 import com.app.ecom_application.Dto.UserResponse;
 import com.app.ecom_application.Model.Product;
 import com.app.ecom_application.Repository.ProductRepository;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -16,12 +18,13 @@ import java.util.stream.Collectors;
 @Service
 public class ProductService {
 
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
 
+    @CacheEvict(value = {"products", "productSearch"}, allEntries = true)
     public ProductResponse createProduct(ProductRequest productRequest) {
 
         Product product = new Product();
@@ -58,6 +61,7 @@ public class ProductService {
 
     }
 
+    @CacheEvict(value = {"products", "productSearch"}, allEntries = true)
     public Optional<ProductResponse> updateProduct(Long id, ProductRequest productRequest)
     {
 
@@ -71,8 +75,10 @@ public class ProductService {
     }
 
 
+    @Cacheable(value = "products", key = "'all'")
     public List<ProductResponse> fetchAllProducts()
     {
+        System.out.println("Fetching products from MongoDB...");
 
         return productRepository.findByActiveTrue().stream()
                 .map(this::mapToProductResponse)
@@ -85,6 +91,7 @@ public class ProductService {
                 .collect(Collectors.toList());
     }
 
+    @CacheEvict(value = {"products", "productSearch"}, allEntries = true)
     public boolean deleteProduct(Long id) {
 
         return productRepository.findById(id)
@@ -95,7 +102,11 @@ public class ProductService {
 
     }
 
+    @Cacheable(value = "productSearch", key = "#keyword.toLowerCase()")
     public List<ProductResponse> searchProduct(String keyword) {
+
+        System.out.println("Searching products from MongoDB...");
+
         return productRepository.searchProducts(keyword).stream()
                 .map(this::mapToProductResponse)
                 .collect(Collectors.toList());

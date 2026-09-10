@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.json.JSONObject;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Service
@@ -22,7 +23,7 @@ public class RazorpayService {
     @Value("${app.razorpay.key_secret:demo_secret}")
     private String keySecret;
 
-    public PaymentOrderResponse createOrder(long amountInPaise, String currency, String receipt) {
+    public PaymentOrderResponse createOrder(BigDecimal amountInPaise, String currency, String receipt) {
         if ("mock".equalsIgnoreCase(paymentMode)) {
             return createMockOrder(amountInPaise, currency, receipt);
         }
@@ -30,12 +31,12 @@ public class RazorpayService {
         return createRealOrder(amountInPaise, currency, receipt);
     }
 
-    public PaymentOrderResponse createMockOrder(long amountInPaise, String currency, String receipt) {
+    public PaymentOrderResponse createMockOrder(BigDecimal amountInPaise, String currency, String receipt) {
         String orderId = "order_" + UUID.randomUUID().toString().substring(0, 12);
         PaymentOrderResponse response = new PaymentOrderResponse();
         response.setOrderId(orderId);
         response.setCurrency(currency == null || currency.isBlank() ? "INR" : currency);
-        response.setAmount((int) amountInPaise);
+        response.setAmount((BigDecimal) amountInPaise);
         response.setKey(keyId);
         response.setReceipt(receipt == null || receipt.isBlank() ? "demo-receipt" : receipt);
         response.setStatus("created");
@@ -43,7 +44,7 @@ public class RazorpayService {
         return response;
     }
 
-    public PaymentOrderResponse createRealOrder(long amountInPaise, String currency, String receipt) {
+    public PaymentOrderResponse createRealOrder(BigDecimal amountInPaise, String currency, String receipt) {
         String resolvedCurrency = currency == null || currency.isBlank() ? "INR" : currency;
         String resolvedReceipt = receipt == null || receipt.isBlank() ? "order_receipt" : receipt;
         try {

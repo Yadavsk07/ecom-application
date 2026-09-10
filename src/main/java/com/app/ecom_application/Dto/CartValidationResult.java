@@ -9,12 +9,11 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PaymentOrderResponse {
-    private String orderId;
-    private String currency;
-    private BigDecimal amount;
-    private String key;
-    private String receipt;
-    private String status;
+public class CartValidationResult {
+
+    private boolean valid;
+
     private String message;
+
+    private BigDecimal totalAmount;
 }
